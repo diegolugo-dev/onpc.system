@@ -13,6 +13,11 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
 div {
   display: flex;
   flex-direction: row;
@@ -104,12 +109,9 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     margin-top: 10px;
-  }
-  
-h2 {
-    text-align: center;
-    margin-top: 30px;
 }
+  
+
   
 #resultado {
     margin-top: 20px;
