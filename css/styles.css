@@ -19,12 +19,12 @@ div {
   justify-content: space-between;
 }
 
-#div1 {
+.divclass1 {
   display: flex;
   flex-direction: column;
 }
 
-#div2 {
+.divclass2 {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -34,7 +34,7 @@ div {
   border-radius: 5px;
 }
 
-#div3 {
+.divclass3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -46,7 +46,7 @@ div {
   
 }
 
-#div4 {
+.divclass4 {
   display: flex;
   flex-direction: column;
 }
