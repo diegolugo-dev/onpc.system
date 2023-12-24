@@ -29,7 +29,7 @@ div {
   flex-direction: column;
 }
 
-.divclass2 {
+.customer-lookup {
   display: flex;
   flex-direction: column;
   width: 300px;
