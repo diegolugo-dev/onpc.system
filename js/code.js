@@ -1,4 +1,4 @@
-var bd = evento.target.result;
+var bd;
 
 function IniciarBaseDatos()
   {
@@ -33,6 +33,8 @@ function CrearAlmacen(evento)
   }
 
   function AlmacenarContacto() {
+
+    bd = evento.target.result;
     var N = document.querySelector("#iddocumento").value;
     var I = document.querySelector("#nombre").value;
     var E = document.querySelector("#apellido").value;
