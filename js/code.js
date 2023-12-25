@@ -34,7 +34,6 @@ function CrearAlmacen(evento)
 
   function AlmacenarContacto() {
 
-    db = evento.target.result;
     var N = document.querySelector("#iddocumento").value;
     var I = document.querySelector("#nombre").value;
     var E = document.querySelector("#apellido").value;
@@ -45,7 +44,7 @@ function CrearAlmacen(evento)
       edad: E
     };
   
-    var transaccion = db.transaction(["Clients"], "readwrite");
+    var transaccion = bd.transaction(["Clients"], "readwrite");
     var almacen = transaccion.objectStore("Client");
   
     almacen.add(contacto);
