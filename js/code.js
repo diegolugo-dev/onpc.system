@@ -32,7 +32,7 @@ function CrearAlmacen(evento)
       almacen.addEventListener("error", MostrarError);
   }
 
-  function AlmacenarContacto() {
+function AlmacenarContacto() {
 
     var N = document.querySelector("#iddocumento").value;
     var I = document.querySelector("#nombre").value;
