@@ -2,9 +2,12 @@
 const request = indexedDB.open("OnPC", 1);
 
 db.onsuccess = function(event) {
-    const objectStore = db.createObjectStore("clients", { keyPath: "ID" });
-  };
-
+    const objectStore = db.createObjectStore("clients", {
+      keyPath: "ID",
+      autoIncrement: true,
+      unique: true,
+    });
+};
 /*
 // Espera a que la base de datos esté abierta
 request.onsuccess = function(event) {
