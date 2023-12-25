@@ -22,36 +22,34 @@
         </fieldset>
       </form>
     </section>
+
+    <section class="customer-registration">
+      <h2>Registro de clientes</h2>
+      <form>
+        <fieldset>
+          <label for="documento">Número de documento</label>
+          <input type="text" name="documento" id="documento" required>
+          <label for="tipo_documento">Tipo de documento</label>
+          <select name="tipo_documento" id="tipo_documento">
+            <option value="cedula">Cédula</option>
+            <option value="rif">RIF</option>
+          </select>
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" required>
+          <label for="apellido">Apellido</label>
+          <input type="text" name="apellido" id="apellido" required>
+          <input type="submit" value="Registrar">
+        </fieldset>
+      </form>
+    </section>
               
-    <h2>Registro de clientes</h2>
-    
-    <div class="divclass2">
-
-      <label for="documento">Número de documento</label>
-      <input type="text" name="documento" id="documento" required>
-
-      <label for="tipo_documento">Tipo de documento</label>
-      <select name="tipo_documento" id="tipo_documento">
-      <option value="cedula">Cédula</option>
-      <option value="rif">RIF</option>
-      </select>
-
-
-      <label for="nombre">Nombre</label>
-      <input type="text" name="nombre" id="nombre" required>
-
-      <label for="apellido">Apellido</label>
-      <input type="text" name="apellido" id="apellido" required>
-
-      <input type="submit" value="Registrar">
-
-    </div>
-
-    <h2>Panel de Control</h2>
-
-    <div class="divclass3">
-      <div class="divclass4">
+   
+    <section class="control-panel">
+      <h2>Panel de Control</h2>
+      <div class="control-panel-section">
+        <h3>Información de la nota</h3>
         <table class="control-center">
+
           <tr>
             <th>Tipo de nota</th>
             <td>
@@ -62,6 +60,7 @@
               </select>
             </td>
           </tr>
+
           <tr>
             <th>Método de pago</th>
             <td>
@@ -71,6 +70,7 @@
               </select>
             </td>
           </tr>
+
           <tr>
             <th>Vendedor</th>
             <td>
@@ -80,6 +80,7 @@
               </select>
             </td>
           </tr>
+
           <tr>
             <th>Tasa de dólar</th>
             <td>
@@ -122,9 +123,11 @@
           </tr>
         </table>
       </div>
-    </div>
+    </section>
 
     <h2>Ingresa los productos</h2>
+
+    <input type="submit" value="Registar datos manual">
     <input type="submit" value="Guardar PDF">
 
     <footer>
