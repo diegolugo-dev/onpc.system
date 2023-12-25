@@ -27,12 +27,12 @@ function CrearAlmacen(evento)
   {
       var basededatos = evento.target.result;
       var almacen = basededatos.createObjectStore("Clients", {keyPath: "id"});
-      almacen.createIndex("id", "nombre", {unique: false});
+      almacen.createIndex("BuscarNombre", "nombre", {unique: false});
   }
 
 
 function AlmacenarContacto() {
-    var N = document.querySelector("#documento").value;
+    var N = document.querySelector("#iddocumento").value;
     var I = document.querySelector("#nombre").value;
     var E = document.querySelector("#apellido").value;
 
