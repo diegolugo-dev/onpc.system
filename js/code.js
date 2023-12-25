@@ -22,8 +22,8 @@ function Comenzar(evento)
 function CrearAlmacen(evento)
   {
       var basededatos = evento.target.result;
-      var almacen = basededatos.createObjectStore("Contactos", {keyPath: "id"});
-      almacen.createIndex("BuscarNombre", "nombre", {unique: false});
+      var almacen = basededatos.createObjectStore("CLients", {keyPath: "id"});
+      almacen.createIndex("ID", "nombre", {unique: false});
   }
 window.addEventListener("load", IniciarBaseDatos);
 
