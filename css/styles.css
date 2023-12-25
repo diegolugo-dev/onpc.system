@@ -24,7 +24,7 @@ div {
   justify-content: space-between;
 }
 
-.divclass1 {
+.customer-lookup {
   display: flex;
   flex-direction: column;
 }
