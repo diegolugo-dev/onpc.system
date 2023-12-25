@@ -28,6 +28,8 @@ function CrearAlmacen(evento)
       var basededatos = evento.target.result;
       var almacen = basededatos.createObjectStore("Clients", {keyPath: "id"});
       almacen.createIndex("BuscarNombre", "nombre", {unique: false});
+      
+      almacen.addEventListener("error", MostrarError);
   }
 
 
