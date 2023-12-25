@@ -1,4 +1,4 @@
-var bd;
+var bd = evento.target.result;
 
 function IniciarBaseDatos()
   {
