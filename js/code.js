@@ -1,4 +1,4 @@
-var bd = evento.target.result;
+var bd;
 
 function IniciarBaseDatos()
   {
@@ -15,7 +15,7 @@ function IniciarBaseDatos()
 
 function MostrarError(evento)
   {
-      alert("Tenemos un ERROR");
+    alert("Tenemos un ERROR: " + evento.target.error.message);
   }
 
 function Comenzar(evento)
