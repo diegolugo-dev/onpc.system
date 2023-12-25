@@ -1,3 +1,33 @@
+var bd;
+
+function IniciarBaseDatos()
+  {
+    var solicitud = indexedDB.open("OnPC");
+
+    solicitud.addEventListener("error", MostrarError);
+    solicitud.addEventListener("success", Comenzar);
+    solicitud.addEventListener("upgradeneeded", CrearAlmacen);
+  }
+
+function MostrarError(evento)
+  {
+      alert("Tenemos un ERROR");
+  }
+
+function Comenzar(evento)
+  {
+      bd = evento.target.result;
+  }
+
+function CrearAlmacen(evento)
+  {
+      var basededatos = evento.target.result;
+      var almacen = basededatos.createObjectStore("Contactos", {keyPath: "id"});
+      almacen.createIndex("BuscarNombre", "nombre", {unique: false});
+  }
+window.addEventListener("load", IniciarBaseDatos);
+
+/*
 // Abre la base de datos
 const request = indexedDB.open("OnPC", 1);
 
@@ -8,6 +38,10 @@ db.onsuccess = function(event) {
       unique: true,
     });
 };
+
+
+
+
 /*
 // Espera a que la base de datos esté abierta
 request.onsuccess = function(event) {
