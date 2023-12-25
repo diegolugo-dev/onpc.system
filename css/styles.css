@@ -39,7 +39,7 @@ div {
   border-radius: 5px;
 }
 
-.divclass3 {
+.control-panel-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -51,7 +51,7 @@ div {
   
 }
 
-.divclass4 {
+.control-panel {
   display: flex;
   flex-direction: column;
 }
