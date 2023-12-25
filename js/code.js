@@ -1,6 +1,11 @@
 // Abre la base de datos
 const request = indexedDB.open("OnPC", 1);
 
+db.onsuccess = function(event) {
+    const objectStore = db.createObjectStore("clients", { keyPath: "ID" });
+  };
+
+/*
 // Espera a que la base de datos esté abierta
 request.onsuccess = function(event) {
   // Obtiene el objeto de la base de datos
