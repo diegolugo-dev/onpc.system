@@ -1,5 +1,5 @@
 // Abre la base de datos
-const request = indexedDB.open("onpc", 1);
+const request = indexedDB.open("OnPC", 1);
 
 // Espera a que la base de datos esté abierta
 request.onsuccess = function(event) {
