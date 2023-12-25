@@ -2,6 +2,10 @@ var bd;
 
 function IniciarBaseDatos()
   {
+    var BtnGuardar = document.querySelector("#btnGuardar")
+    BtnGuardar.addEventListener("click", AlmacenarContacto)
+
+
     var solicitud = indexedDB.open("OnPC");
 
     solicitud.addEventListener("error", MostrarError);
@@ -22,10 +26,39 @@ function Comenzar(evento)
 function CrearAlmacen(evento)
   {
       var basededatos = evento.target.result;
-      var almacen = basededatos.createObjectStore("CLients", {keyPath: "id"});
-      almacen.createIndex("ID", "nombre", {unique: false});
+      var almacen = basededatos.createObjectStore("Clients", {keyPath: "id"});
+      almacen.createIndex("id", "nombre", {unique: false});
   }
+
+
+function AlmacenarContacto() {
+    var N = document.querySelector("#documento").value;
+    var I = document.querySelector("#nombre").value;
+    var E = document.querySelector("#apellido").value;
+
+    var transaccion = db.transaction(["Clients"], "readwrite");
+    var almacen = transaccion.objectStore("Client");
+
+    almacen.add({
+        nombre: N,
+        id: I,
+        edad: E
+    })
+
+    document.querySelector("#documento").value = "";
+    document.querySelector("#nombre").value = "";
+    document.querySelector("#apellido").value = "";
+}
+
 window.addEventListener("load", IniciarBaseDatos);
+
+
+
+
+
+
+
+
 
 /*
 // Abre la base de datos
