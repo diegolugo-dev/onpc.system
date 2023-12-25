@@ -1,56 +1,57 @@
-var bd;
+var bd = evento.target.result;;
 
-    function IniciarBaseDatos() {
-      var BtnGuardar = document.querySelector("#btnGuardar")
-      BtnGuardar.addEventListener("click", AlmacenarContacto)
+function IniciarBaseDatos()
+  {
+    var BtnGuardar = document.querySelector("#btnGuardar")
+    BtnGuardar.addEventListener("click", AlmacenarContacto)
 
 
-      var solicitud = indexedDB.open("OnPC");
+    var solicitud = indexedDB.open("OnPC");
 
-      solicitud.addEventListener("error", MostrarError);
-      solicitud.addEventListener("success", Comenzar);
-      solicitud.addEventListener("upgradeneeded", CrearAlmacen);
-    }
+    solicitud.addEventListener("error", MostrarError);
+    solicitud.addEventListener("success", Comenzar);
+    solicitud.addEventListener("upgradeneeded", CrearAlmacen);
+  }
 
-    function MostrarError(evento) {
-      alert("Tenemos un ERROR: " + evento.target.error.message);
-    }
+function MostrarError(evento)
+  {
+    alert("Tenemos un ERROR: " + evento.target.error.message);
+  }
 
-    function Comenzar(evento) {
+function Comenzar(evento)
+  {
       bd = evento.target.result;
-    }
+  }
 
-    function CrearAlmacen(evento) {
+function CrearAlmacen(evento)
+  {
       var basededatos = evento.target.result;
-      var transaccion = db.transaction(["Clients"], "readwrite");
-      var almacen = transaccion.objectStore("Client");
-
-      almacen.addEventListener("error", MostrarError);
+      var almacen = basededatos.createObjectStore("Clients", {keyPath: "id"});
       almacen.createIndex("BuscarNombre", "nombre", {unique: false});
-    }
+      
+      almacen.addEventListener("error", MostrarError);
+  }
 
-
-    function AlmacenarContacto() {
-      var N = document.querySelector("#iddocumento").value;
-      var I = document.querySelector("#nombre").value;
-      var E = document.querySelector("#apellido").value;
-
-      var contacto = {
-        nombre: N,
-        id: I,
-        edad: E
-      };
-
-      var transaccion = db.transaction(["Clients"], "readwrite");
-      var almacen = transaccion.objectStore("Client");
-
-      almacen.add(contacto);
-
-      document.querySelector("#iddocumento").value = "";
-      document.querySelector("#nombre").value = "";
-      document.querySelector("#apellido").value = "";
-    }
-
+  function AlmacenarContacto() {
+    var N = document.querySelector("#iddocumento").value;
+    var I = document.querySelector("#nombre").value;
+    var E = document.querySelector("#apellido").value;
+  
+    var contacto = {
+      nombre: N,
+      id: I,
+      edad: E
+    };
+  
+    var transaccion = db.transaction(["Clients"], "readwrite");
+    var almacen = transaccion.objectStore("Client");
+  
+    almacen.add(contacto);
+  
+    document.querySelector("#iddocumento").value = "";
+    document.querySelector("#nombre").value = "";
+    document.querySelector("#apellido").value = "";
+  }
 
 window.addEventListener("load", IniciarBaseDatos);
 
