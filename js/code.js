@@ -1,3 +1,21 @@
+// Abre la base de datos
+const request = indexedDB.open("onpc", 1);
+
+// Espera a que la base de datos esté abierta
+request.onsuccess = function(event) {
+  // Obtiene el objeto de la base de datos
+  const db = event.target.result;
+
+  // Crea el almacén de objetos
+  const objectStore = db.createObjectStore("clients");
+
+  // Crea los índices
+  objectStore.createIndex("ID", "ID", { unique: true });
+  objectStore.createIndex("client", "client", { unique: false });
+  objectStore.createIndex("telefono", "telefono", { unique: false });
+  objectStore.createIndex("email", "email", { unique: false });
+};
+/*
 // Variables globales
 const db = indexedDB.open("Clients", 1);
 const tablaProductos = document.getElementById("tbody-productos");
@@ -50,3 +68,4 @@ function agregarProducto() {
 // Eventos
 document.getElementById("btn-verificar").addEventListener("click", verificarCliente);
 document.getElementById("btn-agregar-producto").addEventListener("click", agregarProducto);
+*/
