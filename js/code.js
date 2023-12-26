@@ -1,4 +1,8 @@
-document.fullscreenEnabled
+window.addEventListener("load", function() {
+    // Poner la aplicación en pantalla completa
+    document.body.requestFullscreen();
+  });
+  
 var database;
 
 function IniciarBaseDatos() {
