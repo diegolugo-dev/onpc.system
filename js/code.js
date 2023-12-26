@@ -14,17 +14,6 @@ function IniciarBaseDatos() {
 
 function MostrarError(evento) {
     var error = evento.target.error;
-  
-    // Muestra un mensaje de alerta con información detallada sobre el error
-    alert("Tenemos un ERROR: " + error.name + " - " + error.message);
-  
-    // Intenta resolver el error, si es posible
-    if (error.name === "ConstraintError") {
-      // El valor del campo no es válido
-      var campo = error.constraint;
-      var valor = error.value;
-      alert("El valor del campo " + campo + " (" + valor + ") no es válido.");
-    }
 }
 
 function Comenzar(evento) {
