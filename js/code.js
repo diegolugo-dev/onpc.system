@@ -27,22 +27,21 @@ function CrearAlmacen(evento){
 }
 
 function AlmacenarContacto() {
-    database = evento.target.result;
 
-    var N = document.querySelector("#iddocumento").value;
+    var N = document.querySelector("#id").value;
     var I = document.querySelector("#nombre").value;
     var E = document.querySelector("#apellido").value;
   
-    var contacto = { id: I, nombre: N, edad: E };
+    var contacto = {id: I, nombre: N, edad: E};
   
     var transaccion = database.transaction(["Clients"], "readwrite");
     var almacen = transaccion.objectStore("Clients");
   
     almacen.add(contacto);
 
-    document.querySelector("#iddocumento").value = "3";
-    document.querySelector("#nombre").value = "";
-    document.querySelector("#apellido").value = "";
+    document.querySelector("#id").value = "1";
+    document.querySelector("#nombre").value = "2";
+    document.querySelector("#apellido").value = "3";
 }
 
 window.addEventListener("load", IniciarBaseDatos);
