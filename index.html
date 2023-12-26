@@ -23,26 +23,31 @@
     </section>
 
     <section class="customer-registration">
+
       <h2>Registro de clientes</h2>
+
       <div class="container">
+        <div class="container2">
           <label for="id">Número de documento</label>
           <input type="text" name="documento" id="id" required>
+          
           <label for="tipo_documento">Tipo de documento</label>
           <select name="tipo_documento" id="tipo_documento">
             <option value="cedula">Cédula</option>
             <option value="rif">RIF</option>
           </select>
+        </div>
+          
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" required>
 
-          <label for="name">Nombre</label>
-          <input type="text" name="name" id="name" required>
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido" required>
 
-          <label for="apellido">Apellido</label>
-          <input type="text" name="apellido" id="apellido" required>
+        <label for="phone">Número de telefono</label>
+        <input type="text" name="telefono" id="phone" required>
 
-          <label for="phone">Número de telefono</label>
-          <input type="text" name="telefono" id="phone" required>
-
-          <input type="submit" id="btnGuardar" value="Registrar">
+        <input type="submit" id="btnGuardar" value="Registrar">
       </div>
     </section>
               
