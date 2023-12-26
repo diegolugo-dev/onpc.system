@@ -11,26 +11,18 @@ function IniciarBaseDatos() {
     solicitud.addEventListener("success", Comenzar);
     solicitud.addEventListener("upgradeneeded", CrearAlmacen);
 }
-function MostrarError(error) {
-    alert("Tenemos un ERROR: " + error.message);
-}
-//function MostrarError(evento) {
-  //  alert("Tenemos un ERROR: " + evento.target.error.message);
-//}
 
-function Comenzar(evento)
-  {
-      bd = evento.target.result;
-  }
+function MostrarError(evento) { alert("Tenemos un ERROR: " + evento.target.error.message); }
 
-function CrearAlmacen(evento)
-  {
-      var basededatos = evento.target.result;
-      var almacen = basededatos.createObjectStore("Clients", {keyPath: "id"});
-      almacen.createIndex("BuscarNombre", "nombre", {unique: false});
+function Comenzar(evento) { bd = evento.target.result; }
+
+function CrearAlmacen(evento){
+    var basededatos = evento.target.result;
+    var almacen = basededatos.createObjectStore("Clients", {keyPath: "id"});
+    almacen.createIndex("BuscarNombre", "nombre", {unique: false});
       
-      almacen.addEventListener("error", MostrarError);
-  }
+    almacen.addEventListener("error", MostrarError);
+}
 
 function AlmacenarContacto() {
 
@@ -52,7 +44,7 @@ function AlmacenarContacto() {
     document.querySelector("#iddocumento").value = "";
     document.querySelector("#nombre").value = "";
     document.querySelector("#apellido").value = "";
-  }
+}
 
 window.addEventListener("load", IniciarBaseDatos);
 
