@@ -31,9 +31,9 @@ function AlmacenarContacto() {
     var I = document.querySelector("#id").value;
     var N = document.querySelector("#nombre").value;
     var A = document.querySelector("#apellido").value;
-    var P = document.querySelector("#telefono").value;
+    var P = document.querySelector("#phone").value;
   
-    var client = {id: I, nombre: N, apellido: A, telefono: P};
+    var client = {id: I, nombre: N, apellido: A, phone: P};
   
     var transaccion = database.transaction(["Clients"], "readwrite");
     var warehouse = transaccion.objectStore("Clients");
@@ -43,7 +43,7 @@ function AlmacenarContacto() {
     document.querySelector("#id").value = "";
     document.querySelector("#nombre").value = "";
     document.querySelector("#apellido").value = "";
-    document.querySelector("#telefono").value = "";
+    document.querySelector("#phone").value = "";
 
     alert("Registrado");
 }
