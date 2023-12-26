@@ -43,16 +43,7 @@ function AlmacenarContacto() {
     document.querySelector("#nombre").value = "";
     document.querySelector("#apellido").value = "";
 
-    function mostrarAlerta() {
-        // Crea una alerta
-        const alerta = new Alert();
-      
-        // Establece el mensaje de la alerta
-        alerta.textContent = "Registrado";
-      
-        // Muestra la alerta
-        alerta.show();
-    }
+    alert("Registrado");
 }
 
 window.addEventListener("load", IniciarBaseDatos);

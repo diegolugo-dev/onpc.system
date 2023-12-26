@@ -111,7 +111,7 @@ input[type="submit"] {
     margin-top: 10px;
 }
   
-.alerta {
+.alert {
   position: fixed;
   top: 0;
   left: 0;
