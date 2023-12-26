@@ -29,6 +29,11 @@ div {
   flex-direction: column;
 }
 
+.customer-registration {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -107,7 +112,7 @@ input[type="submit"] {
     cursor: pointer;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 10px;
 }
 
