@@ -1,3 +1,4 @@
+document.fullscreenEnabled
 var database;
 
 function IniciarBaseDatos() {
