@@ -115,6 +115,20 @@ input[type="submit"] {
 }
 
 
+@media (min-width: 768px) {
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  section > div {
+    width: 48%;
+  }
+}
+
+
+
 /*
 
 body {
