@@ -21,7 +21,7 @@ function Comenzar(evento) { database = evento.target.result; }
 function CrearAlmacen(evento){
     database = evento.target.result;
     var almacen = database.createObjectStore("Clients", {keyPath: "id"});
-    almacen.createIndex("BuscarNombre", "nombre", {unique: false});
+    almacen.createIndex("BuscarID", "nombre", {unique: false});
       
     //almacen.addEventListener("error", MostrarError);
 }
