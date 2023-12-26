@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 var database;
 
 function IniciarBaseDatos() {
@@ -43,7 +45,7 @@ function AlmacenarContacto() {
     document.querySelector("#nombre").value = "";
     document.querySelector("#apellido").value = "";
 
-    alert("Registrado");
+    sweetalert("Registrado");
 }
 
 window.addEventListener("load", IniciarBaseDatos);
