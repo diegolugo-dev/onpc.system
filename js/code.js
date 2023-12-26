@@ -1,4 +1,4 @@
-var database = evento.target.result;
+var database;
 
 function IniciarBaseDatos() {
     var BtnGuardar = document.querySelector("#btnGuardar")
@@ -28,7 +28,7 @@ function MostrarError(evento) {
 }
 
 function Comenzar(evento) {
-    database; 
+    database = evento.target.result;
 
   //Maneja los errores que ocurran durante la creación de la base de datos
   solicitud.addEventListener("error", function(error) {
@@ -37,6 +37,7 @@ function Comenzar(evento) {
 }
 
 function CrearAlmacen(evento){
+    database = evento.target.result;
     var almacen = database.createObjectStore("Clients", {keyPath: "id"});
     almacen.createIndex("BuscarNombre", "nombre", {unique: false});
       
