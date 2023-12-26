@@ -1,29 +1,29 @@
 var database;
 
-function IniciarBaseDatos() {
+function StartDatabase() {
     var BtnGuardar = document.querySelector("#btnGuardar")
     BtnGuardar.addEventListener("click", AlmacenarContacto)
 
 
-    var solicitud = indexedDB.open("OnPC");
+    var request = indexedDB.open("OnPC");
 
-    solicitud.addEventListener("error", MostrarError);
-    solicitud.addEventListener("success", Comenzar);
-    solicitud.addEventListener("upgradeneeded", CrearAlmacen);
+    request.addEventListener("error", MostrarError);
+    request.addEventListener("success", Start);
+    request.addEventListener("upgradeneeded", CreateWarehouse);
 }
 
-function MostrarError(evento) {
-    var error = evento.target.error;
+function MostrarError(event) {
+    var error = event.target.error;
 }
 
-function Comenzar(evento) { database = evento.target.result; }
+function Start(event) { database = event.target.result; }
 
-function CrearAlmacen(evento){
-    database = evento.target.result;
-    var almacen = database.createObjectStore("Clients", {keyPath: "id"});
-    almacen.createIndex("BuscarID", "nombre", {unique: false});
+function CreateWarehouse(event){
+    database = event.target.result;
+    var warehouse = database.createObjectStore("Clients", {keyPath: "id"});
+    warehouse.createIndex("BuscarID", "nombre", {unique: false});
       
-    //almacen.addEventListener("error", MostrarError);
+    //warehouse.addEventListener("error", MostrarError);
 }
 
 function AlmacenarContacto() {
@@ -31,19 +31,21 @@ function AlmacenarContacto() {
     var I = document.querySelector("#id").value;
     var N = document.querySelector("#nombre").value;
     var A = document.querySelector("#apellido").value;
+    var P = document.querySelector("#telefono").value;
   
-    var contacto = {id: I, nombre: N, apellido: A};
+    var client = {id: I, nombre: N, apellido: A, telefono: P};
   
     var transaccion = database.transaction(["Clients"], "readwrite");
-    var almacen = transaccion.objectStore("Clients");
+    var warehouse = transaccion.objectStore("Clients");
   
-    almacen.add(contacto);
+    warehouse.add(client);
 
     document.querySelector("#id").value = "";
     document.querySelector("#nombre").value = "";
     document.querySelector("#apellido").value = "";
+    document.querySelector("#telefono").value = "";
 
-    sweetalert("Registrado");
+    alert("Registrado");
 }
 
-window.addEventListener("load", IniciarBaseDatos);
+window.addEventListener("load", StartDatabase);
