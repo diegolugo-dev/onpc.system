@@ -25,7 +25,7 @@ function MostrarError(evento) {
       var valor = error.value;
       alert("El valor del campo " + campo + " (" + valor + ") no es válido.");
     }
-  }
+}
 
 function Comenzar(evento) {
     database = evento.target.result; 
@@ -38,7 +38,7 @@ function Comenzar(evento) {
 
 function CrearAlmacen(evento){
     var basededatos = evento.target.result;
-    var almacen = basededatos.createObjectStore("Clients", {keyPath: "id"});
+    var almacen = basededatos.createObjectStore("Clients", {keyPath: "ido"});
     almacen.createIndex("BuscarNombre", "nombre", {unique: false});
       
     almacen.addEventListener("error", MostrarError);
