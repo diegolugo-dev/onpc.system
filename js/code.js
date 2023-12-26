@@ -27,6 +27,7 @@ function CrearAlmacen(evento){
 }
 
 function AlmacenarContacto() {
+    database = evento.target.result;
 
     var N = document.querySelector("#iddocumento").value;
     var I = document.querySelector("#nombre").value;
