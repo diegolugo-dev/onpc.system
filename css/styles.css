@@ -36,7 +36,7 @@ div {
   margin: 0 auto;
   border: 1px solid #ddd;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .control-panel-section {
@@ -47,7 +47,7 @@ div {
   margin: 0 auto;
   border: 1px solid #ddd;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   
 }
 
@@ -87,7 +87,7 @@ select {
   border-image: initial;
   padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
 
@@ -98,7 +98,7 @@ label {
 input {
     padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 10px;
   }
   
 input[type="submit"] {
@@ -117,9 +117,9 @@ input[type="submit"] {
     margin-top: 20px;
     border: 1px solid #ddd;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
   
 #resultado p {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
