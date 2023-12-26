@@ -16,14 +16,7 @@ function MostrarError(evento) {
     var error = evento.target.error;
 }
 
-function Comenzar(evento) {
-    database = evento.target.result;
-
-  //Maneja los errores que ocurran durante la creación de la base de datos
-  solicitud.addEventListener("error", function(error) {
-    alert("Tenemos un ERROR: " + error.message);
-  });
-}
+function Comenzar(evento) { database = evento.target.result; }
 
 function CrearAlmacen(evento){
     database = evento.target.result;
