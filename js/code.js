@@ -12,9 +12,29 @@ function IniciarBaseDatos() {
     solicitud.addEventListener("upgradeneeded", CrearAlmacen);
 }
 
-function MostrarError(evento) { alert("Tenemos un ERROR: " + evento.target.error.message); }
+function MostrarError(evento) {
+    var error = evento.target.error;
+  
+    // Muestra un mensaje de alerta con información detallada sobre el error
+    alert("Tenemos un ERROR: " + error.name + " - " + error.message);
+  
+    // Intenta resolver el error, si es posible
+    if (error.name === "ConstraintError") {
+      // El valor del campo no es válido
+      var campo = error.constraint;
+      var valor = error.value;
+      alert("El valor del campo " + campo + " (" + valor + ") no es válido.");
+    }
+  }
 
-function Comenzar(evento) { database = evento.target.result; }
+function Comenzar(evento) {
+    database = evento.target.result; 
+
+  // Maneja los errores que ocurran durante la creación de la base de datos
+  solicitud.addEventListener("error", function(error) {
+    alert("Tenemos un ERROR: " + error.message);
+  });
+}
 
 function CrearAlmacen(evento){
     var basededatos = evento.target.result;
@@ -30,13 +50,23 @@ function AlmacenarContacto() {
     var I = document.querySelector("#nombre").value;
     var E = document.querySelector("#apellido").value;
   
-    var contacto = { id: N, id: I, edad: E };
+    var contacto = { id: I, nombre: N, edad: E };
   
     var transaccion = database.transaction(["Clients"], "readwrite");
     var almacen = transaccion.objectStore("Clients");
   
     almacen.add(contacto);
   
+  // Maneja la finalización exitosa
+  transaccion.oncomplete = function() {
+    // Realiza acciones adicionales aquí
+  };
+
+  // Maneja el error
+  almacen.add(contacto).addEventListener("error", function(error) {
+    // Maneja el error aquí
+  });
+
     document.querySelector("#iddocumento").value = "";
     document.querySelector("#nombre").value = "";
     document.querySelector("#apellido").value = "";
