@@ -1,4 +1,4 @@
-var bd;
+var database;
 
 function IniciarBaseDatos() {
     var BtnGuardar = document.querySelector("#btnGuardar")
@@ -14,7 +14,7 @@ function IniciarBaseDatos() {
 
 function MostrarError(evento) { alert("Tenemos un ERROR: " + evento.target.error.message); }
 
-function Comenzar(evento) { bd = evento.target.result; }
+function Comenzar(evento) { database = evento.target.result; }
 
 function CrearAlmacen(evento){
     var basededatos = evento.target.result;
@@ -30,13 +30,9 @@ function AlmacenarContacto() {
     var I = document.querySelector("#nombre").value;
     var E = document.querySelector("#apellido").value;
   
-    var contacto = {
-      nombre: N,
-      id: I,
-      edad: E
-    };
+    var contacto = { id: N, id: I, edad: E };
   
-    var transaccion = bd.transaction(["Clients"], "readwrite");
+    var transaccion = database.transaction(["Clients"], "readwrite");
     var almacen = transaccion.objectStore("Clients");
   
     almacen.add(contacto);
