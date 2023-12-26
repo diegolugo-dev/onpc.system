@@ -38,18 +38,8 @@ function AlmacenarContacto() {
     var almacen = transaccion.objectStore("Clients");
   
     almacen.add(contacto);
-  
-  // Maneja la finalización exitosa
-  transaccion.oncomplete = function() {
-    // Realiza acciones adicionales aquí
-  };
 
-  // Maneja el error
-  almacen.add(contacto).addEventListener("error", function(error) {
-    // Maneja el error aquí
-  });
-
-    document.querySelector("#iddocumento").value = "";
+    document.querySelector("#iddocumento").value = "3";
     document.querySelector("#nombre").value = "";
     document.querySelector("#apellido").value = "";
 }
