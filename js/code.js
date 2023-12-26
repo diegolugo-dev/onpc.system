@@ -1,4 +1,4 @@
-var database;
+var database = evento.target.result;
 
 function IniciarBaseDatos() {
     var BtnGuardar = document.querySelector("#btnGuardar")
@@ -28,20 +28,19 @@ function MostrarError(evento) {
 }
 
 function Comenzar(evento) {
-    database = evento.target.result; 
+    database; 
 
-  // Maneja los errores que ocurran durante la creación de la base de datos
+  //Maneja los errores que ocurran durante la creación de la base de datos
   solicitud.addEventListener("error", function(error) {
     alert("Tenemos un ERROR: " + error.message);
   });
 }
 
 function CrearAlmacen(evento){
-    var basededatos = evento.target.result;
-    var almacen = basededatos.createObjectStore("Clients", {keyPath: "ido"});
+    var almacen = database.createObjectStore("Clients", {keyPath: "id"});
     almacen.createIndex("BuscarNombre", "nombre", {unique: false});
       
-    almacen.addEventListener("error", MostrarError);
+    //almacen.addEventListener("error", MostrarError);
 }
 
 function AlmacenarContacto() {
