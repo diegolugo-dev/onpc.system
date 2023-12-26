@@ -1,7 +1,6 @@
 var bd;
-/*
-function IniciarBaseDatos()
-  {
+
+function IniciarBaseDatos() {
     var BtnGuardar = document.querySelector("#btnGuardar")
     BtnGuardar.addEventListener("click", AlmacenarContacto)
 
@@ -11,29 +10,13 @@ function IniciarBaseDatos()
     solicitud.addEventListener("error", MostrarError);
     solicitud.addEventListener("success", Comenzar);
     solicitud.addEventListener("upgradeneeded", CrearAlmacen);
-}*/
-
-function IniciarBaseDatos() {
-    var BtnGuardar = document.querySelector("#btnGuardar")
-    BtnGuardar.addEventListener("click", AlmacenarContacto)
-  
-  
-    var solicitud = indexedDB.open("OnPC");
-  
-    solicitud.addEventListener("error", function(error) {
-      alert("No se pudo abrir la base de datos: " + error.message);
-    });
-    solicitud.addEventListener("success", Comenzar);
-  }
-  
-  function MostrarError(error) {
+}
+function MostrarError(error) {
     alert("Tenemos un ERROR: " + error.message);
 }
-
-function MostrarError(evento)
-  {
-    alert("Tenemos un ERROR: " + evento.target.error.message);
-  }
+//function MostrarError(evento) {
+  //  alert("Tenemos un ERROR: " + evento.target.error.message);
+//}
 
 function Comenzar(evento)
   {
