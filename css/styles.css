@@ -40,7 +40,11 @@ margin: 0 auto;
 border: 1px solid #ddd;
 padding: 20px;
 border-radius: 8px;
+gap: 10px;
+align-items: stretch;
 }
+
+
 
 .control-panel-section {
 display: flex;
@@ -99,13 +103,6 @@ border: 1px solid #ccc;
 border-radius: 8px;
 }
 
-
-th {
-    display: table-cell;
-    vertical-align: inherit;
-    font-weight: bold;
-    text-align: -internal-rigth;
-}
 
 label {
   margin-bottom: 5px;
