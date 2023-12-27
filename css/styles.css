@@ -18,6 +18,10 @@ h1, h2, h3 {
   font-weight: normal;
 }
 
+div {
+  display: flex;
+}
+
 /* Card styles */
 .container {
   background-color: #fff;
