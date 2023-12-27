@@ -127,6 +127,10 @@ input[type="submit"] {
 }
 
 
+input[type="text"]:focus::placeholder {
+  color: transparent;
+}
+
 @media (min-width: 768px) {
   section {
     display: flex;
