@@ -36,10 +36,12 @@ h1, h2, h3 {
 
 input#name {
   min-width: none;
+  width:min-content;
   max-width: max-content; 
 }
 input#apellido {
   min-width: none;
+  width:min-content;
   max-width: max-content; 
 }
 
