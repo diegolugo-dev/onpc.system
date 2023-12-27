@@ -18,7 +18,12 @@ h1, h2, h3 {
   font-weight: normal;
 }
 
-.id {
+.name {
+  min-width: none;
+  max-width: max-content; 
+}
+.apellido {
+  min-width: none;
   max-width: max-content; 
 }
 /* Card styles */
