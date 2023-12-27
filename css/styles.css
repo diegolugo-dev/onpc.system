@@ -34,9 +34,10 @@ h1, h2, h3 {
   justify-content: space-between; 
 }
 
-input#name, input#apellido {
-  min-width: 150px;
-  max-width: max-content; 
+input#name, input#apellido  {
+  min-width: 100px;
+  max-width: max-content;
+  width: 126px;
 }
 
 /* Input fields */
