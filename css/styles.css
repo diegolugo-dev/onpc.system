@@ -1,123 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #333;
-  background-color: #fff;
-  margin: 0;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-header, section, footer {
-  padding: 20px;
-}
-
-h1, h2, h3 {
-  margin-top: 0;
-  font-weight: 500;
-}
-
-h1 {
-  font-size: 24px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-h3 {
-  font-size: 16px;
-}
-
-input, select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Mac-inspired styling */
-body {
-  -webkit-font-smoothing: antialiased; /* Enhance text rendering */
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2; /* Lighter background for header */
-}
-
-section {
-  border-radius: 10px; /* Rounded corners for sections */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.container2 {
-  display: flex;
-  gap: 10px;
-}
-
-.control-panel {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
-}
-
-.control-panel-section table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.control-panel-section th,
-.control-panel-section td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
-}
-
-.sub-title {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-footer {
-  text-align: center;
-  font-size: 12px;
-  color: #999;
-}
-
-/* Additional Mac-like touches */
-input:focus, select:focus {
-  outline: none; /* Remove default outline */
-  border-color: #007bff; /* Blue focus border */
-}
-
-button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
-/*body {
   font-family: sans-serif;
   margin: 20px;
 }
@@ -242,4 +125,10 @@ input[type="submit"] {
   border: none;
   border-radius: 10px;
   margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
 }
