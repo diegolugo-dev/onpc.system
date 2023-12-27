@@ -95,6 +95,7 @@ input[type="text" i] {
   padding-block: 1px;
   padding-inline: 2px;
   padding: 5px;
+  min-width: 109px;
 }
 
 input[type="submit"] {
