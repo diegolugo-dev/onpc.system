@@ -19,10 +19,7 @@ h1, h2, h3 {
 }
 
 /* Card styles */
-.container,
-.panel,
-.control-panel-section,
-table.control-center {
+.container {
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
