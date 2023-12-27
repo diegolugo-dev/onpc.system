@@ -48,9 +48,7 @@ flex-direction: row;
 flex-wrap: wrap;
 width: 61vmax;
 margin: 0 auto;
-border: 1px solid #ddd;
 padding: 20px;
-border-radius: 10px;
 
 }
 
@@ -63,6 +61,8 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   align-content: center;
+  border-radius: 10px;
+  border: 1px solid #ddd;
   }
 
 section {
