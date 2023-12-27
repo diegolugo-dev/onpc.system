@@ -45,6 +45,14 @@ gap: 10px;
 align-items: stretch;
 }
 
+.container_doble {
+display: flex;
+flex-direction: column;
+width: 250px;
+max-width: max-content;
+margin: 0 auto;
+}
+
 section {
 display: flex;
 flex-direction: row;
