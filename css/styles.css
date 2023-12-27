@@ -22,7 +22,7 @@ flex-direction: row;
 justify-content: space-between;
 }
 
-.enter-identification-number {
+.identification-input {
 display: flex;
 flex-direction: column;
 }
