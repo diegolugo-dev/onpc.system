@@ -1,4 +1,120 @@
-/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+text-align: center;
+margin-top: 30px;
+}
+
+div {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.identification-input {
+display: flex;
+flex-direction: column;
+}
+
+.customer-registration {
+display: flex;
+flex-direction: column;
+}
+
+.container {
+display: flex;
+flex-direction: column;
+width: 250px;
+max-width: max-content;
+margin: 0 auto;
+border: 1px solid #ddd;
+padding: 20px;
+border-radius: 8px;
+gap: 10px;
+align-items: stretch;
+}
+
+section {
+display: flex;
+flex-direction: row;
+}
+
+select {
+text-rendering: auto;
+color: fieldtext;
+letter-spacing: normal;
+word-spacing: normal;
+line-height: normal;
+text-transform: none;
+text-indent: 0px;
+text-shadow: 0 0 black;
+display: inline-block;
+text-align: start;
+appearance: auto;
+box-sizing: border-box;
+align-items: center;
+-webkit-rtl-ordering: logical;
+background-color: field;
+cursor: default;
+width: -webkit-fill-available;
+white-space: pre;
+border-width: 1px;
+border-style: solid;
+border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+border-image: initial;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 8px;
+}
+
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input[type="text" i] {
+  writing-mode: horizontal-tb !important;
+  padding-block: 1px;
+  padding-inline: 2px;
+  padding: 5px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
+/*
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
@@ -19,7 +135,7 @@ h1, h2, h3 {
 }
 
 
-/* Card styles */
+
 .container {
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -40,7 +156,6 @@ input#name, input#apellido  {
   width: 126px;
 }
 
-/* Input fields */
 input[type="text"],
 input[type="submit"],
 select {
@@ -64,7 +179,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* Tables */
+
 table.control-center th,
 table.control-center td {
   padding: 10px;
@@ -75,9 +190,6 @@ table.control-center tr:nth-child(even) {
   background-color: #f5f5f5;
 }
 
-/* Additional styling for minimalism */
-/* Remove any unnecessary borders, outlines, or extra spacing */
-/* Consider using a subtle color palette for a more elegant look */
 
 /*@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
 
@@ -192,4 +304,4 @@ footer {
   text-align: center;
   font-size: 12px;
   color: #999;
-}
+}*/
