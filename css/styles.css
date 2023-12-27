@@ -18,14 +18,7 @@ h1, h2, h3 {
   font-weight: normal;
 }
 
-input#name {
-  min-width: none;
-  max-width: max-content; 
-}
-input#apellido {
-  min-width: none;
-  max-width: max-content; 
-}
+
 /* Card styles */
 .container {
   background-color: #fff;
@@ -39,6 +32,15 @@ input#apellido {
 .container_doble {
   flex-direction: row;
   justify-content: space-between; 
+}
+
+input#name {
+  min-width: none;
+  max-width: max-content; 
+}
+input#apellido {
+  min-width: none;
+  max-width: max-content; 
 }
 
 /* Input fields */
