@@ -20,12 +20,10 @@ h1, h2, h3 {
 
 input#name {
   min-width: none;
-  width: 20px;
   max-width: max-content; 
 }
 input#apellido {
   min-width: none;
-  width: 20px;
   max-width: max-content; 
 }
 /* Card styles */
