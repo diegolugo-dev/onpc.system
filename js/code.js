@@ -1,8 +1,8 @@
 var database;
 
 function StartDatabase() {
-    var BtnGuardar = document.querySelector("#btnGuardar")
-    BtnGuardar.addEventListener("click", StoreClient)
+    var BtnSave = document.querySelector("#btnSave")
+    BtnSave.addEventListener("click", StoreClient)
 
 
     var request = indexedDB.open("OnPC");
@@ -30,10 +30,10 @@ function StoreClient() {
 
     var I = document.querySelector("#id").value;
     var N = document.querySelector("#name").value;
-    var A = document.querySelector("#apellido").value;
+    var A = document.querySelector("#lastname").value;
     var P = document.querySelector("#phone").value;
   
-    var client = {id: I, name: N, apellido: A, phone: P};
+    var client = {id: I, name: N, lastname: A, phone: P};
   
     var transaccion = database.transaction(["Clients"], "readwrite");
     var warehouse = transaccion.objectStore("Clients");
@@ -42,7 +42,7 @@ function StoreClient() {
 
     document.querySelector("#id").value = "";
     document.querySelector("#name").value = "";
-    document.querySelector("#apellido").value = "";
+    document.querySelector("#lastname").value = "";
     document.querySelector("#phone").value = "";
 
     alert("Registrado");
