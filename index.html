@@ -74,13 +74,15 @@
         </div>
       </section>
 
+
+
       <section class="control-panel">
 
-        <h2 class="sub-title">Panel de Control</h2>
+        <h2 class="sub-title">Control Panel</h2>
 
         <div class="control-panel">
 
-          <h3>Información de la nota</h3>
+          <h3>Info</h3>
 
           <div class="control-panel-section">
 
@@ -98,13 +100,12 @@
             </tr>
 
             <tr>
-              <th>Método de pago</th>
+
+              <th>Fecha</th>
               <td>
-                <select name="metodo_pago" id="metodo_pago">
-                  <option value="Dólares en Efectivo (USD)">Efectivo</option>
-                  <option value="Bolivares (Bs)">Tarjeta</option>
-                </select>
+                <input type="text" name="date" id="date" value="0">
               </td>
+
             </tr>
 
             <tr>
@@ -143,6 +144,17 @@
                 </select>
               </td>
             </tr>
+
+            <tr>
+              <th>Método de pago</th>
+              <td>
+                <select name="metodo_pago" id="metodo_pago">
+                  <option value="Dólares en Efectivo (USD)">Efectivo</option>
+                  <option value="Bolivares (Bs)">Tarjeta</option>
+                </select>
+              </td>
+            </tr>
+
             <tr>
               <th>Estado de pago</th>
               <td>
@@ -151,15 +163,6 @@
                   <option value="Pendiente">Pendiente</option>
                 </select>
               </td>
-            </tr>
-
-            <tr>
-
-              <th>Fecha</th>
-              <td>
-                <input type="text" name="date" id="date" value="0">
-              </td>
-
             </tr>
 
           </table>
