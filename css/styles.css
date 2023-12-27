@@ -1,61 +1,130 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  background-color: #f2f2f2;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+main {
+  padding: 30px;
+}
+
+section {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent content from overflowing the card */
+}
+
+.container {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sub-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  background-color: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #ccc;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.panel {
+  display: flex;
+  gap: 20px;
+}
+
+.control-panel-section {
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.control-panel-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.control-panel-section th,
+.control-panel-section td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+input[type="submit"] {
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #e0e0e0;
+}
+
+
+
+
+
+
+
+
+/* old desing
+
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
 
 body {
   font-family: sans-serif;
   margin: 20px;
-}
-
-.title {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.sub-title {
-text-align: center;
-margin-top: 30px;
-}
-
-div {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-}
-
-#identification-input {
-display: flex;
-flex-direction: column;
-}
-
-#customer-registration {
-display: flex;
-flex-direction: column;
-}
-
-.container {
-display: flex;
-flex-direction: column;
-width: 250px;
-max-width: max-content;
-margin: 0 auto;
-border: 1px solid #ddd;
-padding: 20px;
-border-radius: 8px;
-gap: 10px;
-align-items: stretch;
-}
-
-.sub-container {
-display: flex;
-flex-direction: column;
-width: 250px;
-max-width: max-content;
-margin: 0 auto;
-}
-
-section {
-display: flex;
-flex-direction: row;
 }
 
 select {
@@ -84,11 +153,6 @@ border-image: initial;
 padding: 5px;
 border: 1px solid #ccc;
 border-radius: 8px;
-}
-
-
-label {
-  margin-bottom: 5px;
 }
 
 input {
@@ -122,195 +186,4 @@ footer {
   color: #999;
 }
 
-/*
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  background-color: #f5f5f5;
-  margin: 0;
-}
-
-header, main, footer {
-  padding: 20px;
-  text-align: center;
-}
-
-h1, h2, h3 {
-  margin: 0;
-  font-weight: normal;
-}
-
-
-
-.container {
-  background-color: #fff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  max-width: max-content;
-}
-
-.sub-container {
-  flex-direction: row;
-  justify-content: space-between; 
-}
-
-input#name, input#apellido  {
-  min-width: 100px;
-  max-width: max-content;
-  width: 126px;
-}
-
-input[type="text"],
-input[type="submit"],
-select {
-  background-color: #f2f2f2;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-input[type="text"]:focus,
-select:focus {
-  outline: none;
-  border-color: #ccc;
-}
-
-input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-}
-
-
-table.control-center th,
-table.control-center td {
-  padding: 10px;
-  text-align: left;
-}
-
-table.control-center tr:nth-child(even) {
-  background-color: #f5f5f5;
-}
-
-
-/*@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-}
-
-.title {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.sub-title {
-text-align: center;
-margin-top: 30px;
-}
-
-div {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-}
-
-.identification-input {
-display: flex;
-flex-direction: column;
-}
-
-.customer-registration {
-display: flex;
-flex-direction: column;
-}
-
-.container {
-display: flex;
-flex-direction: column;
-width: 250px;
-max-width: max-content;
-margin: 0 auto;
-border: 1px solid #ddd;
-padding: 20px;
-border-radius: 8px;
-gap: 10px;
-align-items: stretch;
-}
-
-section {
-display: flex;
-flex-direction: row;
-}
-
-select {
-text-rendering: auto;
-color: fieldtext;
-letter-spacing: normal;
-word-spacing: normal;
-line-height: normal;
-text-transform: none;
-text-indent: 0px;
-text-shadow: 0 0 black;
-display: inline-block;
-text-align: start;
-appearance: auto;
-box-sizing: border-box;
-align-items: center;
--webkit-rtl-ordering: logical;
-background-color: field;
-cursor: default;
-width: -webkit-fill-available;
-white-space: pre;
-border-width: 1px;
-border-style: solid;
-border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-border-image: initial;
-padding: 5px;
-border: 1px solid #ccc;
-border-radius: 8px;
-}
-
-
-label {
-  margin-bottom: 5px;
-}
-
-input {
-  flex: 1;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-input[type="text" i] {
-  writing-mode: horizontal-tb !important;
-  padding-block: 1px;
-  padding-inline: 2px;
-  padding: 5px;
-}
-
-input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-footer {
-  text-align: center;
-  font-size: 12px;
-  color: #999;
-}*/
+*/
