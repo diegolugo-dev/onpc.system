@@ -1,149 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8" />
-   <title>OnPC System</title>
-    <link rel="icon" type="image/png" href="./public/favicon.png">
-    <link rel="stylesheet" href="./css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <title>OnPC System</title>
+  <link rel="icon" type="image/png" href="./public/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	
+	<div class="limiter">
+		<div class="container">
+			<div class="wrap">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="images/img-01.png" alt="IMG">
+				</div>
 
-    <header>
-      <h1 class="title">System</h1>
-    </header>
+				<form class="form validate-form">
+					<span class="form-title">
+						Register
+					</span>
 
-    <main>
-
-      <section id="identification-input">
-        <h2 class="sub-title">Ingrese el numero de documento</h2>
-        <div class="container">
-          <div class="sub-container">
-            <select name="tipo_documento" id="tipo_documento1">
-              <option value="c.i">C.I</option>
-              <option value="rif">RIF</option>
-            </select>
-            <input type="text" name="consult_number" id="consult_number" required placeholder="number" onfocus="this.placeholder=''" onblur="this.placeholder='number'">
-          </div>
-          <input type="submit" value="Enter">
-        </div>
-      </section>
-
-      <section id="customer-registration">
-        <h2 class="sub-title">Registration</h2>
-        <div class="container">
-          <label class="sub-titule">Number ID</label>
-          <div class="enter_id">
-            <select name="tipo_documento" id="tipo_documento">
-              <option value="id">C.I</option>
-              <option value="rif">R.I.F</option>
-            </select>
-            <input type="text" name="Number id" id="id" required>
-          </div>
-          <div class="enter_complete_name">
+          <div class="wrap-input100 validate-input">
             <input type="text" name="name" id="name" required placeholder="name" onfocus="this.placeholder=''" onblur="this.placeholder='name'">
             <input type="text" name="lastname" id="lastname"  required placeholder="Last name" onfocus="this.placeholder=''" onblur="this.placeholder='Last Name'">
           </div>
-          <div class="enter_number_phone">
-            <select name="area_code" id="area_code">
-              <option value="+58">+58</option>
-              <option value="+1">+1</option>
-            </select>
-            <input type="text" name="phone" id="phone" required placeholder="Phone" onfocus="this.placeholder=''" onblur="this.placeholder='Phone'">
-          </div>
-          <input type="submit" id="btnSave" value="Register">
-        </div>
-      </section>
 
+				</form>
+			</div>
+		</div>
+	</div>
 
-      <section class="control-panel">
-        <h2 class="sub-title">Control Panel</h2>
-        <h3 class="sub-title">Info</h3>
-        <div class="panel">
-          <div class="control-panel-section">
-            <table class="control-center">
-              <tr>
-                <th>Tipo de nota</th>
-                <td>
-                  <select name="tipo_nota" id="tipo_nota">
-                    <option value="Venta">Venta</option>
-                    <option value="Compra">Compra</option>
-                    <option value="Cotizacion">Cotizacion</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>Fecha</th>
-                <td>
-                  <input type="text" name="date" id="date" value="0">
-                </td>
-              </tr>
-              <tr>
-                <th>Vendedor</th>
-                <td>
-                  <select name="vendedor" id="vendedor">
-                    <option value="Diego">Efectivo</option>
-                    <option value="Moi">Tarjeta</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>Tasa de dólar</th>
-                <td>
-                  <input type="text" name="tasa_dolar" id="tasa_dolar" value="1">
-                </td>
-              </tr>
-              <tr>
-                <th>Precio delivery</th>
-                <td>
-                  <input type="text" name="precio_delivery" id="precio_delivery" value="0">
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="control-panel-section">
-            <table class="control-center">
-              <tr>
-                <th>Entrega</th>
-                <td>
-                  <select name="metodo_entrega" id="metodo_entrega">
-                    <option value="Delivery">Delivery</option>
-                    <option value="Pick up">Pickup</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>Método de pago</th>
-                <td>
-                  <select name="metodo_pago" id="metodo_pago">
-                    <option value="Dólares en Efectivo (USD)">Efectivo</option>
-                    <option value="Bolivares (Bs)">Tarjeta</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>Estado de pago</th>
-                <td>
-                  <select name="estado_pago" id="estado_pago">
-                    <option value="Completado">Completado</option>
-                    <option value="Pendiente">Pendiente</option>
-                  </select>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <h2 class="sub-title">Ingresa los productos</h2>
-
-      <input type="submit" value="Guardar PDF">
-    </main>
-
-    <footer>
-      <p>© 2023-2024 OnPC System</p>
-    </footer>
-
-    <script src="./js/code.js"></script>
 </body>
-</html> 
