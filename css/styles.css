@@ -23,6 +23,23 @@
  
 }
 
+.wrap {
+  width: 950px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 100px 130px 100px 95px;
+  height: auto;
+}
+
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
@@ -38,7 +55,7 @@
 }
 
 @media (max-width: 992px) {
-  .wrap-login100 {
+  .wrap {
     padding: 100px 90px 100px 85px;
   }
 
@@ -52,7 +69,7 @@
 }
 
 @media (max-width: 768px) {
-  .wrap-login100 {
+  .wrap {
     padding: 100px 80px 33px 80px;
   }
 
@@ -69,7 +86,7 @@
 }
 
 @media (max-width: 576px) {
-  .wrap-login100 {
+  .wrap {
     padding: 100px 20px 33px 20px;
   }
 }
