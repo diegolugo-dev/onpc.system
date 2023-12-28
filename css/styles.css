@@ -1,146 +1,19 @@
-/* General styles */
-body {
-  font-family: sans-serif;
-  margin: 0;
-  background-color: #f5f5f5; /* Light gray background */
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: #e4e4e4;
+ 
 }
-
-header, main, footer {
-  padding: 2rem;
-  text-align: center;
-}
-
-h1, h2, h3 {
-  margin: 1rem 0;
-  font-weight: normal;
-}
-
-/* Card-style design */
-section {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 1rem auto; /* Center align cards */
-  padding: 1rem;
-  overflow: hidden; /* Prevent content overflow for smaller screens */
-}
-
-/* Responsive layout */
-@media (max-width: 768px) {
-  section {
-    width: 90%; /* Adjust card width for smaller screens */
-  }
-}
-
-/* Minimalist typography */
-body {
-  color: #333;
-  font-size: 16px;
-}
-
-h1, h2, h3 {
-  color: #222;
-  font-weight: 500;
-}
-
-/* Input fields */
-input[type="text"],
-input[type="number"],
-select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-input[type="submit"] {
-  background-color: #4CAF50; /* Green */
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  background-color: #eee;
-  color: #666;
-  font-size: 14px;
-}
-
-
-
-
-
-
-/* old desing
-
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-}
-
-select {
-text-rendering: auto;
-color: fieldtext;
-letter-spacing: normal;
-word-spacing: normal;
-line-height: normal;
-text-transform: none;
-text-indent: 0px;
-text-shadow: 0 0 black;
-display: inline-block;
-text-align: start;
-appearance: auto;
-box-sizing: border-box;
-align-items: center;
--webkit-rtl-ordering: logical;
-background-color: field;
-cursor: default;
-width: -webkit-fill-available;
-white-space: pre;
-border-width: 1px;
-border-style: solid;
-border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-border-image: initial;
-padding: 5px;
-border: 1px solid #ccc;
-border-radius: 8px;
-}
-
-input {
-  flex: 1;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-input[type="text" i] {
-  writing-mode: horizontal-tb !important;
-  padding-block: 1px;
-  padding-inline: 2px;
-  padding: 5px;
-  min-width: 109px;
-}
-
-input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-footer {
-  text-align: center;
-  font-size: 12px;
-  color: #999;
-}
-
-*/
