@@ -1,6 +1,11 @@
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
 
 .container {
   width: 100%;  
@@ -23,7 +28,7 @@
 
 @media (width > 500px) {
  
-  .container-login100 {
+  .container {
     background: -webkit-linear-gradient(-135deg, #1e83d6, #03ade0);
     background: -o-linear-gradient(-135deg, #1e83d6, #03ade0);
     background: -moz-linear-gradient(-135deg, #1e83d6, #03ade0);
