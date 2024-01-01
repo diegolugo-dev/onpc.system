@@ -68,12 +68,16 @@ input[type="submit"] {
   background: #fff;
   border-radius: 10px;
   display: flex;
-  flex-wrap: wrap;
+  
   justify-content: space-between;
-  padding: 100px 130px 100px 95px;
+  padding: 100px 65px 100px 65px;
   height: auto;
 }
 
+form {
+  display: flex;
+  margin-top: 0em;
+}
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
