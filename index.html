@@ -28,29 +28,16 @@
               <option value="id">C.I</option>
               <option value="rif">R.I.F</option>
             </select>
+            <input type="text" name="Number id" id="id" required>
+            <select name="area_code" id="area_code">
+              <option value="+58">+58</option>
+              <option value="+1">+1</option>
+            </select>
+            <input type="text" name="phone" id="phone" required placeholder="Phone" onfocus="this.placeholder=''" onblur="this.placeholder='Phone'">
           </div>
-
-          
-            <div class="container">
-              <label class="sub-titule">Number ID</label>
-              <div class="enter_id">
-                
-                <input type="text" name="Number id" id="id" required>
-              </div>
-              <div class="enter_complete_name">
-                <input type="text" name="name" id="name" required placeholder="name" onfocus="this.placeholder=''" onblur="this.placeholder='name'">
-                <input type="text" name="lastname" id="lastname"  required placeholder="Last name" onfocus="this.placeholder=''" onblur="this.placeholder='Last Name'">
-              </div>
-              <div class="enter_number_phone">
-                <select name="area_code" id="area_code">
-                  <option value="+58">+58</option>
-                  <option value="+1">+1</option>
-                </select>
-                <input type="text" name="phone" id="phone" required placeholder="Phone" onfocus="this.placeholder=''" onblur="this.placeholder='Phone'">
-              </div>
-              <input type="submit" id="btnSave" value="Register">
-            </div>
-
+          <div>
+            <input type="submit" id="btnSave" value="Register">
+          </div>
 				</form>
 			</div>
 		</div>
