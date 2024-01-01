@@ -24,15 +24,17 @@
           <div class="wrap-input100 validate-input">
             <input type="text" name="name" id="name" required placeholder="name" onfocus="this.placeholder=''" onblur="this.placeholder='name'">
             <input type="text" name="lastname" id="lastname"  required placeholder="Last name" onfocus="this.placeholder=''" onblur="this.placeholder='Last Name'">
+            <select name="tipo_documento" id="tipo_documento">
+              <option value="id">C.I</option>
+              <option value="rif">R.I.F</option>
+            </select>
           </div>
+
           
             <div class="container">
               <label class="sub-titule">Number ID</label>
               <div class="enter_id">
-                <select name="tipo_documento" id="tipo_documento">
-                  <option value="id">C.I</option>
-                  <option value="rif">R.I.F</option>
-                </select>
+                
                 <input type="text" name="Number id" id="id" required>
               </div>
               <div class="enter_complete_name">
